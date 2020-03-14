@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="Ferdinand Tugano" />
+    <link rel="icon" href="favicon.ico" />
+
+    <title>Fiduprevisora</title>
+
+    <!-- Icons for this template -->
+    <link
+      href="assets/fonts/font-awesome/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/app.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="fidu">
+    
+    <header class="fidu-header col d-flex align-items-center fidu-header--main-dashboard">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col d-flex align-items-center justify-content-between">
+            <div class="logo-container d-flex align-items-center">
+              <button class="hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+              <img class="fidu-logo" src="assets/img/logo-fiduprevisora.svg" alt="Fiduprevisora">
+            </div>
+            <div class="user-links d-flex justify-content-between">
+              <div class="user-name d-flex flex-column mr-4 pr-4">
+                <span class="user-name-text pb-3">Bienvenido, Nombre Apellido</span>
+                <span class="user-last-access">Último ingreso 07/20/2020 10:22:35 pm</span>
+              </div>
+              <div class="user-account-access d-flex flex-column">
+                <a href="mi-cuenta.html" class="user-my-account d-flex align-items-center pb-3">
+                  <img class="icon-user mr-2" src="assets/img/icon-user--white.svg" alt="usuario">
+                  <span>Mi Cuenta</span>
+                </a>
+                <a href="#" class="user-log-out d-flex align-items-center">
+                  <img class="icon-user mr-2" src="assets/img/icon-log-out.svg" alt="salir">
+                  <span>Cerrar Sesión</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <main role="main" class="main-dashboard d-flex justify-content-between">
+      <aside class="aside-nav">
+        <ul class="aside-nav__list">
+          <li class="aside-nav__list-item aside-nav__list-item--active">
+            <a href="mis-productos.html" class="aside-nav__list-item-link">
+              <img class="icon__aside-nav mr-2" src="assets/img/icon-products.svg" alt="productos">
+              <span class="aside__nav-text">Mis Productos</span>
+            </a>
+          </li>
+          <li class="aside-nav__list-item">
+            <a href="pagos-transferencias.html" class="aside-nav__list-item-link">
+              <img class="aside_nav-icon mr-2" src="assets/img/icon-transfers.svg" alt="pagos y transferencias">
+              <span class="aside__nav-text">Pagos Y Transferencias</span>
+            </a>
+          </li>
+          <li class="aside-nav__list-item">
+            <a href="beneficiarios.html" class="aside-nav__list-item-link">
+              <img class="aside_nav-icon mr-2" src="assets/img/icon-beneficiaries.svg" alt="inscripción beneficiarios">
+              <span class="aside__nav-text">Inscripción Beneficiarios</span>
+            </a>
+          </li>
+          <li class="aside-nav__list-item">
+            <a href="certificados.html" class="aside-nav__list-item-link">
+              <img class="aside_nav-icon mr-2" src="assets/img/icon-certificates.svg" alt="certificados">
+              <span class="aside__nav-text">Certificados</span>
+            </a>
+          </li>
+          <li class="aside-nav__list-item">
+            <a href="contactenos.html" class="aside-nav__list-item-link">
+              <img class="aside_nav-icon mr-2" src="assets/img/icon-contact.svg" alt="contáctenos">
+              <span class="aside__nav-text">Contáctenos</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="dashboard">
+        <h1 class="dashboard__title">Mis Productos - Gráfica de Rentabilidades</h1>
+         <div class="dashboard__graph">
+           <div class="dashboard__graph-options mb-4">
+            <span class="fidu-input__label mb-3">Desde - Hasta</span>
+            <div id="reportrange" class="fidu-input"> 
+              <i class="fa fa-calendar"></i>&nbsp;
+              <span class="fidu-input__text"></span>
+            </div>
+           </div><!-- /dashboard__graph-options -->
+           <div class="dashboard__graph-chart">
+             <div class="dashboard__graph-chart-label-content mb-3">
+              <span class="dashboard__graph-chart-label">
+                Fondo:
+              </span>
+              <span class="dashboard__graph-chart-name">
+                Confirenta
+              </span>
+             </div>
+              <img class="" src="assets/img/chart.png" alt="">
+           </div><!-- /dashboard__graph-chart -->
+         </div><!-- /dashboard__graph -->
+
+         <div class="dashboard__table">
+           <div class="dashboard__table-options d-flex justify-content-between align-items-center mb-4 flex-wrap">
+             <div class="dashboard__table-options-export d-flex justify-content-begin align-items-center">
+               <span class="dashboard__table-options-export-text">
+                 Exportar
+               </span>
+               <a href="#" class="btn btn-primary mx-3">Excel</a>
+               <a href="#" class="btn btn-primary">PDF</a>
+             </div><!-- /dashboard__table-options-export -->
+             <div class="dashboard__table-options-filter d-flex justify-content-start justify-content-lg-end align-items-center flex-wrap">
+               <span class="dashboard__table-options-export-text mr-3">Filtrar</span>
+               <div class="dashboard__table-options-filter-btn">
+                <select multiple class="selectpicker" data-actions-box="true">
+                    <option>Fondo</option>
+                    <option>Estado</option>
+                    <option>Cargo</option>
+                    <option>Valor Máximo De Retiro</option>
+                    <option>Saldo Total</option>
+                </select><!-- End -->
+               </div><!-- /dashboard__table-options-filter-btn -->
+               <div class="dashboard__table-options-filter-show d-flex justify-content-start justify-content-md-end align-items-center ml-0 ml-md-5 mt-4 mt-md-0">
+                <form action="">
+                  <div class="form-label-group drop">
+                    <select class="custom-select fidu-select" id="inputGroupSelect01">
+                      <option selected disabled>Cantidad a Mostrar</option>
+                      <option value="4">4</option>
+                      <option value="8">8</option>
+                      <option value="12">12</option>
+                    </select>
+                  </div>
+                </form>
+                <span class="dashboard__table-options-export-text ml-3 d-none d-sm-block">Resultados</span>
+               </div>
+             </div><!-- /dashboard__table-options-filter -->
+           </div><!-- /dashboard__table-options -->
+          <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+            <thead>
+              <tr>
+                <th scope="col">Fondo</th>
+                <th scope="col">Encargo</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Valor Máximo de Retiro</th>
+                <th scope="col">Saldo Total</th>
+                <th scope="col">Fecha Cierre</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="dashboard__table-fund">Confirenta</td>
+                <td>108007</td>
+                <td>Vigente</td>
+                <td>100000000</td>
+                <td>100000000</td>
+                <td>30/09/2017</td>
+              </tr>
+              <tr>
+                <td class="dashboard__table-fund">Confirenta</td>
+                <td>108007</td>
+                <td>Vigente</td>
+                <td>100000000</td>
+                <td>100000000</td>
+                <td>30/09/2017</td>
+              </tr>
+              <tr>
+                <td class="dashboard__table-fund">Confirenta</td>
+                <td>108007</td>
+                <td>Vigente</td>
+                <td>100000000</td>
+                <td>100000000</td>
+                <td>30/09/2017</td>
+              </tr>
+              <tr>
+                <td class="dashboard__table-fund">Confirenta</td>
+                <td>108007</td>
+                <td>Vigente</td>
+                <td>100000000</td>
+                <td>100000000</td>
+                <td>30/09/2017</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="dashboard__table-pagination d-flex justify-content-between align-items-center flex-wrap">
+            <nav aria-label="Page navigation" class="dashboard__table-pagination-nav mr-5 mr-sm-0">
+              <ul class="pagination mt-3">
+                <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+              </ul>
+            </nav>
+            <div class="dashboard__table-pagination-results">
+              <span class="dashboard__table-pagination-resusts-text">
+                4 Resultados de 5
+              </span>
+            </div>
+          </div>
+         </div><!-- /dashboard__table -->
+
+
+
+      </div> <!-- /dashboard -->
+        
+    </main>
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/vendor/jquery.slim.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>  
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/js/i18n/defaults-es_ES.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+  </body>
+</html>
+

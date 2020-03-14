@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="Ferdinand Tugano" />
+    <link rel="icon" href="favicon.ico" />
+
+    <title>Fiduprevisora</title>
+
+    <!-- Icons for this template -->
+    <link
+      href="assets/fonts/font-awesome/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Stylesheet -->
+    <!-- build:css -->
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="fidu">
+    
+    <header class="fidu-header col d-flex align-items-center fidu-header--main-dashboard">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col d-flex align-items-center justify-content-between">
+            <div class="logo-container d-flex align-items-center">
+              <button class="hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+              <img class="fidu-logo" src="assets/img/logo-fiduprevisora.svg" alt="Fiduprevisora">
+            </div>
+            <div class="user-links d-flex justify-content-between">
+              <div class="user-name d-flex flex-column mr-4 pr-4">
+                <span class="user-name-text pb-3">Bienvenido, Nombre Apellido</span>
+                <span class="user-last-access">Último ingreso 07/20/2020 10:22:35 pm</span>
+              </div>
+              <div class="user-account-access d-flex flex-column">
+                <a href="mi-cuenta.html" class="user-my-account d-flex align-items-center pb-3">
+                  <img class="icon-user mr-2" src="assets/img/icon-user--white.svg" alt="usuario">
+                  <span>Mi Cuenta</span>
+                </a>
+                <a href="#" class="user-log-out d-flex align-items-center">
+                  <img class="icon-user mr-2" src="assets/img/icon-log-out.svg" alt="salir">
+                  <span>Cerrar Sesión</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <main role="main" class="main-dashboard d-flex justify-content-between">
+      <aside class="aside-nav">
+        <ul class="aside-nav__list">
+          <li class="aside-nav__list-item">
+            <a href="mis-productos.html" class="aside-nav__list-item-link">
+              <img class="icon__aside-nav mr-2" src="assets/img/icon-products.svg" alt="productos">
+              <span class="aside__nav-text">Mis Productos</span>
+            </a>
+          </li>
+          <li class="aside-nav__list-item aside-nav__list-item--active">
+            <a href="pagos-transferencias.html" class="aside-nav__list-item-link">
+              <img class="aside_nav-icon mr-2" src="assets/img/icon-transfers.svg" alt="pagos y transferencias">
+              <span class="aside__nav-text">Pagos Y Transferencias</span>
+            </a>
+          </li>
+          <li class="aside-nav__list-item">
+            <a href="beneficiarios.html" class="aside-nav__list-item-link">
+              <img class="aside_nav-icon mr-2" src="assets/img/icon-beneficiaries.svg" alt="inscripción beneficiarios">
+              <span class="aside__nav-text">Inscripción Beneficiarios</span>
+            </a>
+          </li>
+          <li class="aside-nav__list-item">
+            <a href="certificados.html" class="aside-nav__list-item-link">
+              <img class="aside_nav-icon mr-2" src="assets/img/icon-certificates.svg" alt="certificados">
+              <span class="aside__nav-text">Certificados</span>
+            </a>
+          </li>
+          <li class="aside-nav__list-item">
+            <a href="contactenos.html" class="aside-nav__list-item-link">
+              <img class="aside_nav-icon mr-2" src="assets/img/icon-contact.svg" alt="contáctenos">
+              <span class="aside__nav-text">Contáctenos</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="dashboard">
+        <h1 class="dashboard__title">Pagos y Transferencias</h1>
+
+
+         <div class="dashboard__tabs mt-5">
+          <ul class="nav nav-tabs justify-content-start nav-fill to-accordion" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="tab-traslados" data-toggle="tab" href="#traslados" role="tab" aria-controls="traslados" aria-selected="true">Traslados Entre Encargos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab-transferencias" data-toggle="tab" href="#transferencias" role="tab" aria-controls="transferencias" aria-selected="false">Transferencias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab-adiciones" data-toggle="tab" href="#adiciones" role="tab" aria-controls="adiciones" aria-selected="false">Adiciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab-transacciones" data-toggle="tab" href="#transacciones" role="tab" aria-controls="transacciones" aria-selected="false">Estado de Transacciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab-historial" data-toggle="tab" href="#historial" role="tab" aria-controls="historial" aria-selected="false">Historial De Adiciones PSE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab-limite" data-toggle="tab" href="#limite" role="tab" aria-controls="limite" aria-selected="false">Límite de Montos</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="traslados" role="tabpanel" aria-labelledby="tab-traslados">
+              <div class="d-flex align-items-center">
+                <span class="fidu-input__label mr-3">Opción de Fondo</span>
+              <form action="">
+                <div class="form-label-group drop">
+                  <select class="custom-select fidu-select" id="inputGroupSelect01">
+                    <option value="4">Mismo Fondo</option>
+                    <option value="8">Diferente Fondo</option>
+                  </select>
+                </div>
+              </form>
+              </div>
+              <p class="pt-5">Horario de lunes a viernes de 8:00am a 2:30pm.</p>
+            </div><!-- /tab-pane -->
+
+            <div class="tab-pane fade" id="transferencias" role="tabpanel" aria-labelledby="tab-transferencias">
+              <div class="d-flex align-items-center">
+                <span class="fidu-input__label mr-3">Tipos de Transferencias</span>
+              <form action="">
+                <div class="form-label-group drop">
+                  <select class="custom-select fidu-select" id="inputGroupSelect01">
+                    <option value="4">Cuentas Bancarias inscritas</option>
+                    <option value="8">Depósitos Judiciales</option>
+                    <option value="8">Giros en Efectivo</option>
+                    <option value="8">Pagos SEBRA</option>
+                  </select>
+                </div>
+              </form>
+              </div>
+              <p class="pt-5">Horario de lunes a viernes de 8:00am a 2:30pm.</p>
+            </div><!-- /tab-pane -->
+
+            <div class="tab-pane fade" id="adiciones" role="tabpanel" aria-labelledby="tab-adiciones">
+              <div class="d-flex align-items-center">
+                <span class="fidu-input__label mr-3">Tipos de Adición</span>
+              <form action="">
+                <div class="form-label-group drop">
+                  <select class="custom-select fidu-select" id="inputGroupSelect01">
+                    <option value="4">Adición en Oficina</option>
+                    <option value="8">Adición PSE</option>
+                    <option value="8">Adición por Carta</option>
+                  </select>
+                </div>
+              </form>
+              </div>
+              <p class="pt-5">Horario de lunes a viernes de 8:00am a 2:30pm.</p>
+            </div><!-- /tab-pane -->
+
+            <div class="tab-pane fade" id="transacciones" role="tabpanel" aria-labelledby="tab-transacciones">
+              <div class="transacciones d-flex align-items-center justify-content-start mb-4 pb-4">
+                <div class="transacciones-opciones mr-5">
+                  <span class="fidu-input__label mb-3">Buscar Por:</span>
+                  <form action="">
+                    <div class="form-label-group drop">
+                      <select class="custom-select fidu-select" id="inputGroupSelect01">
+                        <option value="4">Número de Transacción</option>
+                        <option value="8">Fecha</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="dashboard__graph-options">
+                  <span class="fidu-input__label mb-3">Desde - Hasta</span>
+                  <div id="reportrange" class="fidu-input"> 
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span class="fidu-input__text"></span>
+                  </div>
+                 </div><!-- /dashboard__graph-options -->
+              </div><!-- /transacciones -->
+
+              <div class="dashboard__table-options d-flex justify-content-between align-items-center mb-4 flex-wrap">
+                <div class="dashboard__table-options-export d-flex justify-content-begin align-items-center">
+                  <span class="dashboard__table-options-export-text">
+                    Exportar
+                  </span>
+                  <a href="#" class="btn btn-primary mx-3">Excel</a>
+                  <a href="#" class="btn btn-primary">PDF</a>
+                </div><!-- /dashboard__table-options-export -->
+                <div class="dashboard__table-options-filter d-flex justify-content-start justify-content-lg-end align-items-center flex-wrap">
+                  <span class="dashboard__table-options-export-text mr-3">Filtrar</span>
+                  <div class="dashboard__table-options-filter-btn">
+                   <select multiple class="selectpicker" data-actions-box="true">
+                       <option>Fondo</option>
+                       <option>Estado</option>
+                       <option>Cargo</option>
+                       <option>Valor Máximo De Retiro</option>
+                       <option>Saldo Total</option>
+                   </select><!-- End -->
+                  </div><!-- /dashboard__table-options-filter-btn -->
+                  <div class="dashboard__table-options-filter-show d-flex justify-content-start justify-content-md-end align-items-center ml-0 ml-md-5 mt-4 mt-md-0">
+                   <form action="">
+                     <div class="form-label-group drop">
+                       <select class="custom-select fidu-select" id="inputGroupSelect01">
+                         <option selected disabled>Cantidad a Mostrar</option>
+                         <option value="4">4</option>
+                         <option value="8">8</option>
+                         <option value="12">12</option>
+                       </select>
+                     </div>
+                   </form>
+                   <span class="dashboard__table-options-export-text ml-3 d-none d-sm-block">Resultados</span>
+                  </div>
+                </div><!-- /dashboard__table-options-filter -->
+              </div><!-- /dashboard__table-options -->
+
+              <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Fecha Transacción</th>
+                    <th scope="col">Fecha Aprobación</th>
+                    <th scope="col">Monto</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">No. Solicitud</th>
+                    <th scope="col">Registros</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="text-center mt-5 mb-5">
+                        No hay datos disponibles.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div><!-- /tab-pane -->
+
+            <div class="tab-pane fade" id="historial" role="tabpanel" aria-labelledby="tab-historial">
+              <div class="dashboard__table-options d-flex justify-content-between align-items-center mb-4 flex-wrap">
+                <div class="dashboard__table-options-export d-flex justify-content-begin align-items-center">
+                  <span class="dashboard__table-options-export-text">
+                    Exportar
+                  </span>
+                  <a href="#" class="btn btn-primary mx-3">Excel</a>
+                  <a href="#" class="btn btn-primary">PDF</a>
+                </div><!-- /dashboard__table-options-export -->
+                <div class="dashboard__table-options-filter d-flex justify-content-start justify-content-lg-end align-items-center flex-wrap">
+                  <span class="dashboard__table-options-export-text mr-3">Filtrar</span>
+                  <div class="dashboard__table-options-filter-btn">
+                   <select multiple class="selectpicker" data-actions-box="true">
+                       <option>Fondo</option>
+                       <option>Estado</option>
+                       <option>Cargo</option>
+                       <option>Valor Máximo De Retiro</option>
+                       <option>Saldo Total</option>
+                   </select><!-- End -->
+                  </div><!-- /dashboard__table-options-filter-btn -->
+                  <div class="dashboard__table-options-filter-show d-flex justify-content-start justify-content-md-end align-items-center ml-0 ml-md-5 mt-4 mt-md-0">
+                   <form action="">
+                     <div class="form-label-group drop">
+                       <select class="custom-select fidu-select" id="inputGroupSelect01">
+                         <option selected disabled>Cantidad a Mostrar</option>
+                         <option value="4">4</option>
+                         <option value="8">8</option>
+                         <option value="12">12</option>
+                       </select>
+                     </div>
+                   </form>
+                   <span class="dashboard__table-options-export-text ml-3 d-none d-sm-block">Resultados</span>
+                  </div>
+                </div><!-- /dashboard__table-options-filter -->
+              </div><!-- /dashboard__table-options -->
+   
+                 <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+                   <thead>
+                     <tr>
+                       <th scope="col">ID</th>
+                       <th scope="col">CUS</th>
+                       <th scope="col">Referencia</th>
+                       <th scope="col">Valor</th>
+                       <th scope="col">Fecha Adición</th>
+                       <th scope="col">Estado</th>
+                       <th scope="col">Ver</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td>
+                         <p class="text-center mt-5 mb-5">
+                           No hay datos disponibles.
+                         </p>
+                       </td>
+                     </tr>
+                   </tbody>
+                 </table>
+   
+
+            </div><!-- /tab-pane -->
+
+            <div class="tab-pane fade" id="limite" role="tabpanel" aria-labelledby="tab-limite">
+              <div class="dashboard__table-top-info">
+                <div class="btn-container d-flex">
+                  <a href="#" class="btn btn-primary mb-4 d-flex align-items-center">
+                    <img class="btn-icon mr-2" src="assets/img/icon-plus--white.svg" alt="nuevo monto">
+                    <span class="btn-text">Nuevo Monto</span>
+                  </a>
+                </div>
+                <h2 class="dashboard__table-top-info-title mb-4">Lista de Montos Registrados:</h2>
+              </div><!-- /dashboard__table-top-info -->
+
+              <div class="dashboard__table-options d-flex justify-content-between align-items-center mb-4 flex-wrap">
+                <div class="dashboard__table-options-export d-flex justify-content-begin align-items-center">
+                  <span class="dashboard__table-options-export-text">
+                    Exportar
+                  </span>
+                  <a href="#" class="btn btn-primary mx-3">Excel</a>
+                  <a href="#" class="btn btn-primary">PDF</a>
+                </div><!-- /dashboard__table-options-export -->
+                <div class="dashboard__table-options-filter d-flex justify-content-start justify-content-lg-end align-items-center flex-wrap">
+                  <span class="dashboard__table-options-export-text mr-3">Filtrar</span>
+                  <div class="dashboard__table-options-filter-btn">
+                   <select multiple class="selectpicker" data-actions-box="true">
+                       <option>Fondo</option>
+                       <option>Estado</option>
+                       <option>Cargo</option>
+                       <option>Valor Máximo De Retiro</option>
+                       <option>Saldo Total</option>
+                   </select><!-- End -->
+                  </div><!-- /dashboard__table-options-filter-btn -->
+                  <div class="dashboard__table-options-filter-show d-flex justify-content-start justify-content-md-end align-items-center ml-0 ml-md-5 mt-4 mt-md-0">
+                   <form action="">
+                     <div class="form-label-group drop">
+                       <select class="custom-select fidu-select" id="inputGroupSelect01">
+                         <option selected disabled>Cantidad a Mostrar</option>
+                         <option value="4">4</option>
+                         <option value="8">8</option>
+                         <option value="12">12</option>
+                       </select>
+                     </div>
+                   </form>
+                   <span class="dashboard__table-options-export-text ml-3 d-none d-sm-block">Resultados</span>
+                  </div>
+                </div><!-- /dashboard__table-options-filter -->
+              </div><!-- /dashboard__table-options -->
+   
+                 <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+                   <thead>
+                     <tr>
+                       <th scope="col">ID</th>
+                       <th scope="col">Nombre de Fondo</th>
+                       <th scope="col">Encargo</th>
+                       <th scope="col">Nombre Módulo</th>
+                       <th scope="col">Nombre Opción</th>
+                       <th scope="col">Monto Valor Min.</th>
+                       <th scope="col">Monto Valor Max.</th>
+                       <th scope="col">Días</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td>
+                         <p class="text-center mt-5 mb-5">
+                           No hay datos disponibles.
+                         </p>
+                       </td>
+                     </tr>
+                   </tbody>
+                 </table>
+
+                 <div class="dashboard__table-new-amount my-5">
+                   <form action="">
+                    <div class="container-fluid no-padding">
+                      <div class="row">
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                          <div class="form-label-group drop multi-column">
+                            <label for="fondo">Fondo</label>
+                            <select class="custom-select fidu-select" id="fondo">
+                              <option value="4">CONFIRENTA - 108007</option>
+                              <option value="8">8</option>
+                              <option value="12">12</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                          <div class="form-label-group drop multi-column">
+                            <label for="traslado">Módulo</label>
+                            <select class="custom-select fidu-select" id="traslado">
+                              <option value="4">Traslado</option>
+                              <option value="8">8</option>
+                              <option value="12">12</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                          <div class="form-label-group drop multi-column">
+                            <label for="opcion-modulo">Opción Módulo</label>
+                            <select class="custom-select fidu-select" id="opcion-modulo">
+                              <option value="4">A Cuentas Inscritas</option>
+                              <option value="8">8</option>
+                              <option value="12">12</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                          <div class="form-label-group multi-column">
+                            <label for="dias">Días</label>
+                            <input type="number" id="dias" class="form-control fidu-input" placeholder="0" required="">
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                          <div class="form-label-group multi-column">
+                            <label for="monto-minimo">Monto Mínimo</label>
+                            <input type="number" id="monto-minimo" class="form-control fidu-input" placeholder="0" required="">
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                          <div class="form-label-group multi-column">
+                            <label for="monto-maximo">Monto Máximo</label>
+                            <input type="number" id="monto-maximo" class="form-control fidu-input" placeholder="0" required="">
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                          <div class="custom-control custom-checkbox multi-column mt-4">
+                            <input type="checkbox" class="custom-control-input fidu-input" id="customControlValidation1" required>
+                            <label class="custom-control-label" for="customControlValidation1">Activo</label>
+                          </div>
+                        </div>
+
+
+                      </div><!-- /row -->
+                    </div><!-- /container -->
+                   </form>
+                   <div class="btn-container d-flex align-items-center">
+                    <a href="#" class="btn btn-primary mr-4 d-flex align-items-center">
+                      <img class="btn-icon mr-2" src="assets/img/icon-check--white.svg" alt="check">
+                      <span class="btn-text">Aceptar</span>
+                    </a>
+                    <a href="#" class="btn btn-primary d-flex align-items-center">
+                      <img class="btn-icon mr-2" src="assets/img/icon-back--white.svg" alt="regresar">
+                      <span class="btn-text">Regresar</span>
+                    </a>
+                   </div>
+                 </div><!-- /dashboard__table-new-amount -->
+   
+
+            </div><!-- /tab-pane -->
+          </div><!-- /tab-content -->
+          <div class="panel-group the-accordion" id="accordion" role="tablist" aria-multiselectable="true"></div>
+<!-- /Bootstrap Accordion -->
+</div>
+
+         </div><!-- /dashboard__tabs -->
+
+         
+
+
+
+      </div> <!-- /dashboard -->
+        
+    </main>
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/vendor/jquery.slim.min.js"></script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>  
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.12/js/i18n/defaults-es_ES.min.js"></script>
+    <!-- build:js -->
+    <script src="assets/js/app.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
+

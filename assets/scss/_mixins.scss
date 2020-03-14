@@ -1,0 +1,11 @@
+// Mixins
+
+
+
+// FONTS
+@mixin main-heading {
+    font-family: 'Fira Sans', sans-serif;
+    color: $black60;
+    font-size: $txt-xl;  
+    margin-bottom: 30px;
+}
