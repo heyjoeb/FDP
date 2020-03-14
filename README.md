@@ -13,10 +13,6 @@
 
 - `gulp watch` - Starts localhost server with browser-sync, watches HTML, Sass, JS with hot reloading.
 
-## Overwriting Bootstrap Variable in Sass
-
-- `bootstrap-4-sass-gulp-4-boilerplate/assets/scss/_bootstrap_variable_overrides.scss`
-
 ## Dependencies
 
 ```
