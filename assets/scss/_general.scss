@@ -58,8 +58,8 @@ html, body {
     }
 }
 .btn-primary, .actions-btn {
-    background-color: $orange;
-    border-color: $orange;
+    background-color: $dark-orange;
+    border-color: $dark-orange;
     font-size: $txt-sm;
     letter-spacing: 0.3px;
     text-transform: uppercase;
@@ -208,6 +208,9 @@ a {
     font-size: $txt-xs;
     color: $black60;
     margin-bottom: 0;
+    &--alt {
+        padding: 0 45px;
+    }
 }
 .fidu {
     *:focus {

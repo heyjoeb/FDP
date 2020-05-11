@@ -76,9 +76,9 @@
             </a>
           </li>
           <li class="aside-nav__list-item">
-            <a href="beneficiarios.html" class="aside-nav__list-item-link">
-              <img class="aside_nav-icon mr-2" src="assets/img/icon-beneficiaries.svg" alt="inscripción beneficiarios">
-              <span class="aside__nav-text">Inscripción Beneficiarios</span>
+            <a href="cuentas.html" class="aside-nav__list-item-link">
+              <img class="aside_nav-icon mr-2" src="assets/img/icon-beneficiaries.svg" alt="inscripción cuentas">
+              <span class="aside__nav-text">Inscripción Cuentas</span>
             </a>
           </li>
           <li class="aside-nav__list-item">
@@ -99,11 +99,29 @@
       <div class="dashboard">
         <h1 class="dashboard__title">Pagos y Transferencias</h1>
 
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-4 mt-4">
+              <div class="d-flex align-items-center">
+                <span class="fidu-input__label mr-3">Número del producto</span>
+              <form action="">
+                <div class="form-label-group drop">
+                  <select class="custom-select fidu-select" id="inputGroupSelect01">
+                    <option value="4">645654</option>
+                    <option value="8">567567</option>
+                  </select>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
          <div class="dashboard__tabs mt-5">
           <ul class="nav nav-tabs justify-content-start nav-fill to-accordion" id="myTab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="tab-traslados" data-toggle="tab" href="#traslados" role="tab" aria-controls="traslados" aria-selected="true">Traslados Entre Encargos</a>
+              <a class="nav-link active" id="tab-traslados" data-toggle="tab" href="#traslados" role="tab" aria-controls="traslados" aria-selected="true">Traslados entre FIC</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="tab-transferencias" data-toggle="tab" href="#transferencias" role="tab" aria-controls="transferencias" aria-selected="false">Transferencias</a>
@@ -112,13 +130,19 @@
               <a class="nav-link" id="tab-adiciones" data-toggle="tab" href="#adiciones" role="tab" aria-controls="adiciones" aria-selected="false">Adiciones</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="tab-transacciones" data-toggle="tab" href="#transacciones" role="tab" aria-controls="transacciones" aria-selected="false">Estado de Transacciones</a>
+              <a class="nav-link" id="tab-transacciones" data-toggle="tab" href="#transacciones" role="tab" aria-controls="transacciones" aria-selected="false">Estado de Pagos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="tab-historial" data-toggle="tab" href="#historial" role="tab" aria-controls="historial" aria-selected="false">Historial De Adiciones PSE</a>
+              <a class="nav-link" id="tab-historial" data-toggle="tab" href="#historial" role="tab" aria-controls="historial" aria-selected="false">Historial De Adiciones</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="tab-limite" data-toggle="tab" href="#limite" role="tab" aria-controls="limite" aria-selected="false">Límite de Montos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab-limite" data-toggle="tab" href="#movimientos" role="tab" aria-controls="limite" aria-selected="false">Movimiento Recursos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab-limite" data-toggle="tab" href="#movimientos2" role="tab" aria-controls="limite" aria-selected="false">Movimiento Recursos</a>
             </li>
           </ul>
           <div class="tab-content" id="myTabContent">
@@ -143,15 +167,15 @@
               <form action="">
                 <div class="form-label-group drop">
                   <select class="custom-select fidu-select" id="inputGroupSelect01">
-                    <option value="4">Cuentas Bancarias inscritas</option>
-                    <option value="8">Depósitos Judiciales</option>
-                    <option value="8">Giros en Efectivo</option>
-                    <option value="8">Pagos SEBRA</option>
+                    <option value="4">Cuentas Propias</option>
+                    <option value="8">Cuentas Inscritas</option>
                   </select>
                 </div>
               </form>
               </div>
-              <p class="pt-5">Horario de lunes a viernes de 8:00am a 2:30pm.</p>
+              <p class="pt-5">Horario de operaciones: <br>
+                Adiciones: Lunes a viernes hasta las 2:00 p.m. Fin de mes 11:00 a.m.<br>
+                Retiros: Lunes a viernes hasta las 1:00 p.m. Fin de mes 11:00 a.m.</p>
             </div><!-- /tab-pane -->
 
             <div class="tab-pane fade" id="adiciones" role="tabpanel" aria-labelledby="tab-adiciones">
@@ -160,14 +184,16 @@
               <form action="">
                 <div class="form-label-group drop">
                   <select class="custom-select fidu-select" id="inputGroupSelect01">
-                    <option value="4">Adición en Oficina</option>
+                    <option value="4">Adición por carta</option>
                     <option value="8">Adición PSE</option>
-                    <option value="8">Adición por Carta</option>
+                    <option value="8">Adición por transferencia electrónica</option>
                   </select>
                 </div>
               </form>
               </div>
-              <p class="pt-5">Horario de lunes a viernes de 8:00am a 2:30pm.</p>
+              <p class="pt-5">Horario de operaciones: <br>
+                Adiciones: Lunes a viernes hasta las 2:00 p.m. Fin de mes 11:00 a.m.<br>
+                Retiros: Lunes a viernes hasta las 1:00 p.m. Fin de mes 11:00 a.m.</p>
             </div><!-- /tab-pane -->
 
             <div class="tab-pane fade" id="transacciones" role="tabpanel" aria-labelledby="tab-transacciones">
@@ -469,6 +495,181 @@
    
 
             </div><!-- /tab-pane -->
+
+
+            <div class="tab-pane fade" id="movimientos" role="tabpanel" aria-labelledby="tab-movimientos">
+              <div class="transacciones d-flex align-items-center justify-content-start mb-4 pb-4">
+                <div class="transacciones-opciones mr-5">
+                  <span class="fidu-input__label mb-3">Buscar Por:</span>
+                  <form action="">
+                    <div class="form-label-group drop">
+                      <select class="custom-select fidu-select" id="inputGroupSelect01">
+                        <option value="4">Número de Transacción</option>
+                        <option value="8">Fecha</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="dashboard__graph-options">
+                  <span class="fidu-input__label mb-3">Desde - Hasta</span>
+                  <div id="reportrange" class="fidu-input"> 
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span class="fidu-input__text"></span>
+                  </div>
+                 </div><!-- /dashboard__graph-options -->
+              </div><!-- /transacciones -->
+
+              <div class="dashboard__table-options d-flex justify-content-between align-items-center mb-4 flex-wrap">
+                <div class="dashboard__table-options-export d-flex justify-content-begin align-items-center">
+                  <span class="dashboard__table-options-export-text">
+                    Exportar
+                  </span>
+                  <a href="#" class="btn btn-primary mx-3">Excel</a>
+                  <a href="#" class="btn btn-primary">PDF</a>
+                </div><!-- /dashboard__table-options-export -->
+                <div class="dashboard__table-options-filter d-flex justify-content-start justify-content-lg-end align-items-center flex-wrap">
+                  <span class="dashboard__table-options-export-text mr-3">Filtrar</span>
+                  <div class="dashboard__table-options-filter-btn">
+                   <select multiple class="selectpicker" data-actions-box="true">
+                       <option>Fondo</option>
+                       <option>Estado</option>
+                       <option>Cargo</option>
+                       <option>Valor Máximo De Retiro</option>
+                       <option>Saldo Total</option>
+                   </select><!-- End -->
+                  </div><!-- /dashboard__table-options-filter-btn -->
+                  <div class="dashboard__table-options-filter-show d-flex justify-content-start justify-content-md-end align-items-center ml-0 ml-md-5 mt-4 mt-md-0">
+                   <form action="">
+                     <div class="form-label-group drop">
+                       <select class="custom-select fidu-select" id="inputGroupSelect01">
+                         <option selected disabled>Cantidad a Mostrar</option>
+                         <option value="4">4</option>
+                         <option value="8">8</option>
+                         <option value="12">12</option>
+                       </select>
+                     </div>
+                   </form>
+                   <span class="dashboard__table-options-export-text ml-3 d-none d-sm-block">Resultados</span>
+                  </div>
+                </div><!-- /dashboard__table-options-filter -->
+              </div><!-- /dashboard__table-options -->
+
+              <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Fecha Transacción</th>
+                    <th scope="col">Fecha Aprobación</th>
+                    <th scope="col">Monto</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">No. Solicitud</th>
+                    <th scope="col">Registros</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="text-center mt-5 mb-5">
+                        No hay datos disponibles.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div><!-- /tab-pane -->
+
+
+
+            <div class="tab-pane fade" id="movimientos2" role="tabpanel" aria-labelledby="tab-movimientos2">
+              <div class="transacciones d-flex align-items-center justify-content-start mb-4 pb-4">
+                <div class="transacciones-opciones mr-5">
+                  <span class="fidu-input__label mb-3">Buscar Por:</span>
+                  <form action="">
+                    <div class="form-label-group drop">
+                      <select class="custom-select fidu-select" id="inputGroupSelect01">
+                        <option value="4">Número de Transacción</option>
+                        <option value="8">Fecha</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="dashboard__graph-options">
+                  <span class="fidu-input__label mb-3">Desde - Hasta</span>
+                  <div id="reportrange" class="fidu-input"> 
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span class="fidu-input__text"></span>
+                  </div>
+                 </div><!-- /dashboard__graph-options -->
+              </div><!-- /transacciones -->
+
+              <div class="dashboard__table-options d-flex justify-content-between align-items-center mb-4 flex-wrap">
+                <div class="dashboard__table-options-export d-flex justify-content-begin align-items-center">
+                  <span class="dashboard__table-options-export-text">
+                    Exportar
+                  </span>
+                  <a href="#" class="btn btn-primary mx-3">Excel</a>
+                  <a href="#" class="btn btn-primary">PDF</a>
+                </div><!-- /dashboard__table-options-export -->
+                <div class="dashboard__table-options-filter d-flex justify-content-start justify-content-lg-end align-items-center flex-wrap">
+                  <span class="dashboard__table-options-export-text mr-3">Filtrar</span>
+                  <div class="dashboard__table-options-filter-btn">
+                   <select multiple class="selectpicker" data-actions-box="true">
+                       <option>Fondo</option>
+                       <option>Estado</option>
+                       <option>Cargo</option>
+                       <option>Valor Máximo De Retiro</option>
+                       <option>Saldo Total</option>
+                   </select><!-- End -->
+                  </div><!-- /dashboard__table-options-filter-btn -->
+                  <div class="dashboard__table-options-filter-show d-flex justify-content-start justify-content-md-end align-items-center ml-0 ml-md-5 mt-4 mt-md-0">
+                   <form action="">
+                     <div class="form-label-group drop">
+                       <select class="custom-select fidu-select" id="inputGroupSelect01">
+                         <option selected disabled>Cantidad a Mostrar</option>
+                         <option value="4">4</option>
+                         <option value="8">8</option>
+                         <option value="12">12</option>
+                       </select>
+                     </div>
+                   </form>
+                   <span class="dashboard__table-options-export-text ml-3 d-none d-sm-block">Resultados</span>
+                  </div>
+                </div><!-- /dashboard__table-options-filter -->
+              </div><!-- /dashboard__table-options -->
+
+              <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Fecha Transacción</th>
+                    <th scope="col">Fecha Aprobación</th>
+                    <th scope="col">Monto</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">No. Solicitud</th>
+                    <th scope="col">Registros</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="text-center mt-5 mb-5">
+                        No hay datos disponibles.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div><!-- /tab-pane -->
+
+
+
+
           </div><!-- /tab-content -->
           <div class="panel-group the-accordion" id="accordion" role="tablist" aria-multiselectable="true"></div>
 <!-- /Bootstrap Accordion -->

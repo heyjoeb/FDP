@@ -10254,8 +10254,8 @@ html, body {
 }
 
 .btn-primary, .actions-btn {
-  background-color: #FF8200;
-  border-color: #FF8200;
+  background-color: #CD6419;
+  border-color: #CD6419;
   font-size: 0.875rem;
   letter-spacing: 0.3px;
   text-transform: uppercase;
@@ -10423,6 +10423,10 @@ a:hover, a :focus, a :active {
   font-size: 0.75rem;
   color: rgba(23, 23, 23, 0.6);
   margin-bottom: 0;
+}
+
+.help-text--alt {
+  padding: 0 45px;
 }
 
 .fidu *:focus {
